@@ -4,4 +4,5 @@ Bildes uzdevumi:
 2) Uzd = 3
 3) Uzd = 121
 4) Uzd = Bija daudz tāpec saskaitīju 66
-5) Uzf = arī bija daudz tāpēc saskaitīju 55
+5) Uzd = arī bija daudz tāpēc saskaitīju 55
+6) Uzd = GINA DEGENERES
