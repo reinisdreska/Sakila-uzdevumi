@@ -1,4 +1,4 @@
 # Sakila-uzdevumi
 Bildes uzdevumi:
-1Uzd = 2
-2Uzd = 3
+1)Uzd = 2
+2)Uzd = 3
