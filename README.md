@@ -6,3 +6,4 @@ Bildes uzdevumi:
 4) Uzd = Bija daudz tāpec saskaitīju 66
 5) Uzd = arī bija daudz tāpēc saskaitīju 55
 6) Uzd = GINA DEGENERES
+7) Uzd = ir pieejama
