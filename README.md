@@ -21,3 +21,7 @@ Word uzdevumi
 7) 3a = ALTER TABLE `actor` ADD middle_name VARCHAR(45) AFTER first_name
 8) 3b = ALTER TABLE `actor` MODIFY middle_name blob
 9) 3c = ALTER TABLE `actor` DROP middle_name
+10) 4a = SELECT last_name, COUNT(last_name) FROM `actor` GROUP BY last_name
+11) 4b =SELECT last_name, COUNT(last_name) FROM `actor` GROUP BY last_name HAVING COUNT(last_name)>1
+12) 4c =UPDATE `actor` SET first_name = 'HARPO', last_name = 'WILLIAMS' WHERE first_name = 'GROUCHO'AND last_name = 'WILLIAMS'
+13) 4d = nesapratu kas tur jādara
