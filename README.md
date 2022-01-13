@@ -25,3 +25,4 @@ Word uzdevumi
 11) 4b =SELECT last_name, COUNT(last_name) FROM `actor` GROUP BY last_name HAVING COUNT(last_name)>1
 12) 4c =UPDATE `actor` SET first_name = 'HARPO', last_name = 'WILLIAMS' WHERE first_name = 'GROUCHO'AND last_name = 'WILLIAMS'
 13) 4d = nesapratu kas tur jādara
+14) 5a = SHOW CREATE TABLE `address`
