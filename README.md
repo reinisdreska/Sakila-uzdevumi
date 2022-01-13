@@ -14,3 +14,7 @@ Bildes uzdevumi:
 Word uzdevumi
 1) a = SELECT first_name, last_name FROM `actor`
 1) b = SELECT UPPER(CONCAT(first_name, ' ', last_name))AS `Actor Name` FROM `actor`
+2) a = SELECT actor_id, first_name, last_name FROM `actor` WHERE first_name = 'Joe'
+2) b = SELECT * FROM `actor` WHERE last_name like '%GEN%'
+2) c = SELECT * FROM `actor` WHERE last_name like '%LI%' ORDER BY last_name, first_name
+2) d = SELECT country_id, country FROM `country` WHERE country IN ('Afghanistan', 'Bangladesh', 'China')
