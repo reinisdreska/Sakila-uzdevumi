@@ -7,3 +7,5 @@ Bildes uzdevumi:
 5) Uzd = arī bija daudz tāpēc saskaitīju 55
 6) Uzd = GINA DEGENERES
 7) Uzd = ir pieejama
+8) Uzd = es nezinu kā
+9) Uzd = 115.2720
