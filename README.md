@@ -26,3 +26,8 @@ Word uzdevumi
 12) 4c =UPDATE `actor` SET first_name = 'HARPO', last_name = 'WILLIAMS' WHERE first_name = 'GROUCHO'AND last_name = 'WILLIAMS'
 13) 4d = nesapratu kas tur jādara
 14) 5a = SHOW CREATE TABLE `address`
+15) 6a = SELECT first_name, last_name, address FROM `staff` AS s JOIN `address` AS a ON s.address_id = a.address_id
+16) 6b = SELECT first_name, last_name, SUM(amount), payment_date FROM `staff` AS s JOIN `payment` AS p ON s.staff_Id=p.staff_id WHERE payment_date LIKE '2005-08%' GROUP BY s.staff_id
+17) 6c = SELECT title, COUNT(actor_id) FROM film_actor AS fa INNER JOIN film AS f ON fa.film_id=f.film_id GROUP BY title
+18) 6d = SELECT COUNT(i.inventory_id), title FROM inventory AS i INNER JOIN film AS f ON i.film_id=f.film_id WHERE title = 'Hunchback Impossible' GROUP BY f.film_id
+19) 6e = SELECT first_name, last_name, sum(amount) FROM payment AS p JOIN customer AS c ON p.customer_id=c.customer_id GROUP BY c.customer_id ORDER BY last_name
