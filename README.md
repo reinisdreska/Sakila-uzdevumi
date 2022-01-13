@@ -18,3 +18,6 @@ Word uzdevumi
 4) 2b = SELECT * FROM `actor` WHERE last_name like '%GEN%'
 5) 2c = SELECT * FROM `actor` WHERE last_name like '%LI%' ORDER BY last_name, first_name
 6) 2d = SELECT country_id, country FROM `country` WHERE country IN ('Afghanistan', 'Bangladesh', 'China')
+7) 3a = ALTER TABLE `actor` ADD middle_name VARCHAR(45) AFTER first_name
+8) 3b = ALTER TABLE `actor` MODIFY middle_name blob
+9) 3c = ALTER TABLE `actor` DROP middle_name
