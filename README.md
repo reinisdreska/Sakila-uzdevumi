@@ -31,3 +31,11 @@ Word uzdevumi
 17) 6c = SELECT title, COUNT(actor_id) FROM film_actor AS fa INNER JOIN film AS f ON fa.film_id=f.film_id GROUP BY title
 18) 6d = SELECT COUNT(i.inventory_id), title FROM inventory AS i INNER JOIN film AS f ON i.film_id=f.film_id WHERE title = 'Hunchback Impossible' GROUP BY f.film_id
 19) 6e = SELECT first_name, last_name, sum(amount) FROM payment AS p JOIN customer AS c ON p.customer_id=c.customer_id GROUP BY c.customer_id ORDER BY last_name
+20) 7a = SELECT title FROM film AS f JOIN language AS l ON f.language_id=l.language_id WHERE title LIKE 'K%' OR title LIKE 'Q%' AND l.language_id = 1
+21) 7b = 
+22) 7c = 
+23) 7d = 
+24) 7e = 
+25) 7f = 
+26) 7g = 
+27) 7h = 
