@@ -31,11 +31,14 @@ Word uzdevumi
 17) 6c = SELECT title, COUNT(actor_id) FROM film_actor AS fa INNER JOIN film AS f ON fa.film_id=f.film_id GROUP BY title
 18) 6d = SELECT COUNT(i.inventory_id), title FROM inventory AS i INNER JOIN film AS f ON i.film_id=f.film_id WHERE title = 'Hunchback Impossible' GROUP BY f.film_id
 19) 6e = SELECT first_name, last_name, sum(amount) FROM payment AS p JOIN customer AS c ON p.customer_id=c.customer_id GROUP BY c.customer_id ORDER BY last_name
-20) 7a = SELECT title FROM film AS f JOIN language AS l ON f.language_id=l.language_id WHERE title LIKE 'K%' OR title LIKE 'Q%' AND l.language_id = 1
-21) 7b = 
-22) 7c = 
-23) 7d = 
-24) 7e = 
-25) 7f = 
-26) 7g = 
-27) 7h = 
+20) 7a = SELECT title FROM film AS f JOIN (SELECT language_id FROM language) AS l ON (f.language_id=l.language_id)WHERE title LIKE 'K%' OR title LIKE 'Q%' AND l.language_id = 1
+21) 7b = SELECT first_name, last_name FROM film AS f JOIN (SELECT * FROM film_actor) AS fa ON (f.film_id=fa.film_id) JOIN (SELECT * FROM actor) AS a ON (fa.actor_id=a.actor_id) WHERE title = 'Alone Trip'
+22) 7c = SELECT first_name, last_name, email FROM customer AS c JOIN address AS a ON c.address_id=a.address_id JOIN city AS ci ON a.city_id=ci.city_id JOIN country AS ca ON ci.country_id=ca.country_id WHERE country = 'canada'
+23) 7d = SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id=fc.film_id JOIN category AS c ON fc.category_id=c.category_id WHERE c.name='family'
+24) 7e = SELECT title, COUNT(f.film_id) FROM film AS f JOIN inventory AS i ON f.film_id=i.film_id JOIN rental AS r ON i.inventory_id=r.inventory_id GROUP BY f.film_id ORDER BY COUNT(f.film_id) DESC
+25) 7f = SELECT s.store_id, SUM(amount) FROM store AS s JOIN staff AS st ON s.store_id=st.store_id JOIN payment AS p ON st.staff_id=p.staff_id GROUP BY s.store_id
+26) 7g = SELECT s.store_id, c.city, ca.country FROM store AS s JOIN address AS a ON s.address_id=a.address_id JOIN city AS c ON  a.city_id=c.city_id JOIN country AS ca ON c.country_id=ca.country_id
+27) 7h = SELECT c.name, SUM(amount) FROM category AS c JOIN film_category AS fc ON c.category_id=fc.category_id JOIN inventory AS i ON fc.film_id=i.film_id JOIN rental AS r ON i.inventory_id=r.inventory_id JOIN payment AS p ON r.rental_id=p.rental_id GROUP BY c.name ORDER BY SUM(amount) DESC
+28) 8a = CREATE VIEW sakila.Genres_by_revenue AS SELECT c.name, SUM(amount) FROM category AS c JOIN film_category AS fc ON c.category_id=fc.category_id JOIN inventory AS i ON fc.film_id=i.film_id JOIN rental AS r ON i.inventory_id=r.inventory_id JOIN payment AS p ON r.rental_id=p.rental_id GROUP BY c.name ORDER BY SUM(amount) DESC LIMIT 5
+29) 8b = SELECT * FROM sakila.Genres_by_revenue
+30) 8c = DROP VIEW sakila.Genres_by_revenue es pieļauju ka tā bet man neatļauj jo command denide for user
