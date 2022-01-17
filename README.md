@@ -42,3 +42,6 @@ Word uzdevumi
 28) 8a = CREATE VIEW sakila.Genres_by_revenue AS SELECT c.name, SUM(amount) FROM category AS c JOIN film_category AS fc ON c.category_id=fc.category_id JOIN inventory AS i ON fc.film_id=i.film_id JOIN rental AS r ON i.inventory_id=r.inventory_id JOIN payment AS p ON r.rental_id=p.rental_id GROUP BY c.name ORDER BY SUM(amount) DESC LIMIT 5
 29) 8b = SELECT * FROM sakila.Genres_by_revenue
 30) 8c = DROP VIEW sakila.Genres_by_revenue es pieļauju ka tā bet man neatļauj jo command denide for user
+
+Uzdevumi no github
+1) 1a = SELECT * FROM actor
