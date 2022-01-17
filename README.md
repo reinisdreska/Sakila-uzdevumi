@@ -66,3 +66,6 @@ Uzdevumi no github:
 20) 6a = SELECT title, description, release_year FROM film WHERE description LIKE 'A Thoughtful%'
 21) 6b = SELECT title, description, rental_duration FROM film WHERE description LIKE '%Boat'
 22) 6c = SELECT title, length, description, rental_duration FROM film WHERE description LIKE '%Database%' AND length > 180
+23) 7a = SELECT * FROM payment LIMIT 20
+24) 7b = SELECT payment_id, payment_date, amount FROM payment WHERE amount > 5     nezinu kas ir zero-based un interneta nevareju atrast
+25) 7c = SELECT * FROM customer nezinu        kas ir zero-based un interneta nevareju atrast
