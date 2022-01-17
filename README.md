@@ -11,7 +11,7 @@ Bildes uzdevumi:
 9) Uzd = 115.2720
 10) Uzd = Sci-Fi=108.1967; Documentary=108.7500; Children=109.8000; Animation=111.0152; New=111.1270; Action=111.6094; Classics=111.6667; Horror=112.4821; Travel=113.3158; Music=113.6471; Family=114.7826; Comedy=115.8276; Drama=120.8387; Foreign=121.6986; Games=127.8361; Sports=128.2027
 
-Word uzdevumi
+Word uzdevumi:
 1) 1a = SELECT first_name, last_name FROM `actor`
 2) 1b = SELECT UPPER(CONCAT(first_name, ' ', last_name))AS `Actor Name` FROM `actor`
 3) 2a = SELECT actor_id, first_name, last_name FROM `actor` WHERE first_name = 'Joe'
@@ -43,5 +43,18 @@ Word uzdevumi
 29) 8b = SELECT * FROM sakila.Genres_by_revenue
 30) 8c = DROP VIEW sakila.Genres_by_revenue es pieļauju ka tā bet man neatļauj jo command denide for user
 
-Uzdevumi no github
+Uzdevumi no github:
 1) 1a = SELECT * FROM actor
+2) 1b = SELECT last_name FROM actor
+3) 1c = SELECT title, description, rental_duration, rental_rate, rental_duration * rental_rate AS total_rental_cost FROM film
+4) 2a = SELECT DISTINCT(last_name) FROM actor
+5) 2b = SELECT DISTINCT(postal_code) FROM address
+6) 2c = SELECT DISTINCT(rating) FROM film
+7) 3a = SELECT title, description, rating, length FROM film WHERE LENGTH >= 180
+8) 3b = SELECT payment_id, amount, payment_date FROM payment WHERE payment_date >= '2005-05-27%'
+9) 3c = SELECT payment_id, amount, payment_date FROM payment WHERE payment_date like '2005-05-27%'
+10) 3d = SELECT * FROM customer WHERE last_name LIKE 's%' AND first_name LIKE '%n'
+11) 3e = SELECT * FROM customer WHERE active = 0 OR last_name LIKE '%m'   Es pieļāvu ka active 0 nozīmē ka ir inactive
+12) 3f = SELECT * FROM category WHERE category_id > 4 AND NAME LIKE 'C%'
+13) 3g = SELECT staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, last_update FROM staff WHERE PASSWORD IS NOT NULL
+14) 3h = SELECT staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, last_update FROM staff WHERE PASSWORD IS NULL
