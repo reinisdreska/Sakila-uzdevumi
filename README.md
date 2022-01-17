@@ -63,3 +63,6 @@ Uzdevumi no github:
 17) 4c = SELECT * FROM film WHERE rating IN ('G', 'PG-13', 'NC-17')
 18) 5a = SELECT * FROM payment WHERE payment_date BETWEEN '2005-05-25 00:00:00' AND '2005-05-25 23:59:59'
 19) 5b = SELECT title, description, release_year, rental_duration * rental_rate AS total_rental_cost FROM film WHERE length BETWEEN 100 AND 120
+20) 6a = SELECT title, description, release_year FROM film WHERE description LIKE 'A Thoughtful%'
+21) 6b = SELECT title, description, rental_duration FROM film WHERE description LIKE '%Boat'
+22) 6c = SELECT title, length, description, rental_duration FROM film WHERE description LIKE '%Database%' AND length > 180
