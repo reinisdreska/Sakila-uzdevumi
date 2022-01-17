@@ -58,3 +58,8 @@ Uzdevumi no github:
 12) 3f = SELECT * FROM category WHERE category_id > 4 AND NAME LIKE 'C%'
 13) 3g = SELECT staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, last_update FROM staff WHERE PASSWORD IS NOT NULL
 14) 3h = SELECT staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, last_update FROM staff WHERE PASSWORD IS NULL
+15) 4a = SELECT phone, district FROM address WHERE district IN ('California', 'England', 'Taipei', 'West Java')
+16) 4b = Man nesanāca tie datumi
+17) 4c = SELECT * FROM film WHERE rating IN ('G', 'PG-13', 'NC-17')
+18) 5a = SELECT * FROM payment WHERE payment_date BETWEEN '2005-05-25 00:00:00' AND '2005-05-25 23:59:59'
+19) 5b = SELECT title, description, release_year, rental_duration * rental_rate AS total_rental_cost FROM film WHERE length BETWEEN 100 AND 120
