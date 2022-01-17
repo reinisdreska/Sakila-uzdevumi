@@ -69,3 +69,7 @@ Uzdevumi no github:
 23) 7a = SELECT * FROM payment LIMIT 20
 24) 7b = SELECT payment_id, payment_date, amount FROM payment WHERE amount > 5     nezinu kas ir zero-based un interneta nevareju atrast
 25) 7c = SELECT * FROM customer nezinu        kas ir zero-based un interneta nevareju atrast
+26) 8a = SELECT * FROM film ORDER BY length
+27) 8b = SELECT DISTINCT(rating) FROM film ORDER BY rating DESC
+28) 8c = SELECT payment_date, amount FROM payment ORDER BY amount DESC LIMIT 20
+29) 8d = SELECT title, description, special_features, length, rental_duration FROM film WHERE LENGTH < 120 AND rental_duration BETWEEN 5 AND 7 ORDER BY LENGTH DESC  LIMIT 10
