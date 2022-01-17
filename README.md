@@ -73,3 +73,9 @@ Uzdevumi no github:
 27) 8b = SELECT DISTINCT(rating) FROM film ORDER BY rating DESC
 28) 8c = SELECT payment_date, amount FROM payment ORDER BY amount DESC LIMIT 20
 29) 8d = SELECT title, description, special_features, length, rental_duration FROM film WHERE LENGTH < 120 AND rental_duration BETWEEN 5 AND 7 ORDER BY LENGTH DESC  LIMIT 10
+30) 9a = SELECT c.first_name AS customer_first_name, c.last_name AS customer_last_name, a.first_name AS actor_first_name, a.last_name AS actor_flast_name FROM customer AS c LEFT JOIN actor AS a ON c.last_name = a.last_name
+31) 9b = SELECT c.first_name AS customer_first_name, c.last_name AS customer_last_name, a.first_name AS actor_first_name, a.last_name AS actor_flast_name FROM customer AS c RIGHT JOIN actor AS a ON c.last_name = a.last_name
+32) 9c = SELECT c.first_name AS customer_first_name, c.last_name AS customer_last_name, a.first_name AS actor_first_name, a.last_name AS actor_flast_name FROM customer AS c INNER JOIN actor AS a ON c.last_name = a.last_name
+33) 9d = SELECT city.city, country.country FROM city LEFT JOIN country ON city.country_id=country.country_id
+34) 9e = SELECT f.title, f.description, f.release_year, l.name AS language FROM film AS f LEFT JOIN language AS l ON f.language_id=l.language_id
+35) 9f = SELECT s.first_name, s.last_name, a.address, a.address2, c.city, a.district, a.postal_code FROM staff AS s LEFT JOIN address AS a ON s.address_id=a.address_id LEFT JOIN city AS c ON a.city_id=c.city_id
